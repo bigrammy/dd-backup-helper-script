@@ -64,6 +64,7 @@ sed ':a;N;$!ba;s/\n/.img\n/g' </sdcard/dd-backup/4.txt >/sdcard/dd-backup/5.txt
 #below used to remove spaces but not needed with new method.
 #sed 's/backup[ \t]/backup/g' </sdcard/dd-backup/6.txt >/sdcard/dd-backup/dd-backup.txt
 echo ""
+#Thanks to stackoverflow member ghostdog74 for alt paste method
 echo "9. Joining files!"
 exec 6<"/sdcard/dd-backup/5.txt"
 while read -r line
@@ -72,6 +73,7 @@ do
     echo "${line}${f2line}"
 done <"/sdcard/dd-backup/3.txt" | tee /sdcard/dd-backup/dd-backup.txt
 exec 6<&-
+#paste done.
 echo ""
 echo "10. Cleaning up!"
 
