@@ -80,7 +80,6 @@ rm /sdcard/dd-backup/2.txt
 rm /sdcard/dd-backup/3.txt
 rm /sdcard/dd-backup/4.txt
 rm /sdcard/dd-backup/5.txt
-rm /sdcard/dd-backup/6.txt
 echo ""
 echo "11. dd-backup.txt created!"
 echo ""
